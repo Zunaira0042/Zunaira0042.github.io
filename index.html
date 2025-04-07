@@ -3,7 +3,74 @@
 	
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---><html><head><title></title><meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="assets/css/main.css"></head><body>
+--><html><head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<style>
+		.video-thumbnail {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.play-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 60px;
+			color: white;
+			opacity: 0.8;
+			pointer-events: none;
+		}
+
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 10;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		.modal-content {
+			position: relative;
+			margin: 10% auto;
+			max-width: 720px;
+			background: transparent;
+		}
+
+		.close {
+			position: absolute;
+			top: -30px;
+			right: -10px;
+			color: white;
+			font-size: 40px;
+			cursor: pointer;
+		}
+
+		.video-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+		}
+
+			.video-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+	</style>
+
+</head><body>
 
 		<!-- Header -->
 			<header id="header" class="alt"><div class="logo"><a href="index.html">Zunaira Nazir <span> Game Derveloper</span></a></div>
@@ -37,21 +104,36 @@
 
 						<div>
 							<div class="box">
-								<div class="video-thumbnail" onclick="openVideo()">
+								<div class="video-thumbnail" data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID" onclick="openVideo(this)">
 									<div class="image fit">
 										<img src="images/pic02.jpg" alt="" width="600" height="300">
 									</div>
 									<div class="play-button">&#9658;</div>
 								</div>
-									<div class="content">
-										<header class="align-center">
-											<p>Lead Unity Developer</p>
-											<h2>Marcopolo</h2>
-										</header><p> Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.</p>
-										<!--<footer class="align-center"><a href="#" class="button alt">Learn More</a>
-			</footer>-->
+
+								<!-- YouTube Video Modal -->
+								<div id="videoModal" class="modal">
+									<div class="modal-content">
+										<span class="close" onclick="closeVideo()">&times;</span>
+										<div class="video-container">
+											<iframe id="youtubePlayer" width="100%" height="315"
+													src=""
+													title="YouTube video player" frameborder="0"
+													allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+													allowfullscreen>
+											</iframe>
+										</div>
 									</div>
 								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Lead Unity Developer</p>
+										<h2>Marcopolo</h2>
+									</header><p> Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.</p>
+									<!--<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+		</footer>-->
+								</div>
+							</div>
 							</div>
 
 						<div>
@@ -99,16 +181,40 @@
 						</div>
 					</div>
 				</div>
-			</section><!-- Footer --><footer id="footer"><div class="container">
-					<ul class="icons">
-	                    <!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
-						<li><a href="https://www.linkedin.com/in/zunaira-nazir-a71108187/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.youtube.com/@zunairanazir7072" class="icon fa-youtube"><span class="label">Instagram</span></a></li>
-						<li><a href="mailto:zunaira.nazir30@gamail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul></div>
-			<!--</footer><div class="copyright">
-			Made with <a href="https://templated.co/">Templated</a>.
-		</div>-->
+			</section><!-- Footer --><footer id="footer">
+	<div class="container">
+		<ul class="icons">
+			<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+			<li><a href="https://www.linkedin.com/in/zunaira-nazir-a71108187/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			<li><a href="https://www.youtube.com/@zunairanazir7072" class="icon fa-youtube"><span class="label">Instagram</span></a></li>
+			<li><a href="mailto:zunaira.nazir30@gamail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		</ul>
+	</div>
+	<!--</footer><div class="copyright">
+		Made with <a href="https://templated.co/">Templated</a>.
+	</div>-->
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
+	<script>
+		function openVideo(element) {
+			const videoURL = element.getAttribute("data-video") + "?autoplay=1";
+			const iframe = document.getElementById("youtubePlayer");
+
+			iframe.src = videoURL;
+			document.getElementById("videoModal").style.display = "block";
+		}
+
+		function closeVideo() {
+			const iframe = document.getElementById("youtubePlayer");
+			iframe.src = ""; // Clear to stop video
+			document.getElementById("videoModal").style.display = "none";
+		}
+	</script>
+
+
+</body></html>
