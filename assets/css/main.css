@@ -63,15 +63,15 @@
 	display: none;
 }
 
-.read-more-btn {
+.button.learn-more {
+	display: inline-block;
+	margin-top: 10px;
 	background: none;
-	border: none;
-	color: #007bff;
+	color: inherit;
+	text-decoration: underline;
+	font-size: 0.9em;
 	cursor: pointer;
-	padding: 0;
-	font-weight: bold;
 }
-
 /* Containers */
 
 	.container {
