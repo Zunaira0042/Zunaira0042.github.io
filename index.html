@@ -123,15 +123,35 @@
 										 </div>
 									 </div>
 								 </div>
+								 <!--<div class="project-description">
+		<p class="short-text">
+			This is a Unity-based game that explores a magical world...
+			<span class="dots">...</span>
+			<span class="more-text">
+				The project includes custom shaders, ability systems, and a modular inventory.
+				Multiplayer is implemented using Photon Fusion, allowing real-time interactions.
+			</span>
+		</p>
+		<button class="read-more-btn" onclick="toggleDescription(this)">Read more</button>
+	</div>-->
 
-								 <div class="content">
+								 <div class="Project1_Marcopolo">
 									 <header class="align-center">
 										 <p>Lead Unity Developer</p>
 										 <h2>Marcopolo</h2>
-									 </header><p> Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.</p>
-									 <!--<footer class="align-center"><a href="#" class="button alt">Learn More</a>
-		</footer>-->
-								 </div>
+										 <p class="short-text">
+											 Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road...
+											 <span class="dots">...</span>
+											 <span class="more-text">
+
+												 <!--</header><p>--> Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.<!--</p>-->
+											 </span>
+										 </p>
+									 <button class="read-more-btn" onclick="toggleDescription(this)">Read more</button>
+								 </div>-->
+								 <!--<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+	</footer>-->
+							 </div>
 							 </div>
 						 </div>
 
@@ -188,7 +208,7 @@
 	<div class="container">
 		<ul class="icons">
 			<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
-		<li><a href="https://www.linkedin.com/in/zunaira-nazir-a71108187/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			<li><a href="https://www.linkedin.com/in/zunaira-nazir-a71108187/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 			<li><a href="https://www.youtube.com/@zunairanazir7072" class="icon fa-youtube"><span class="label">Instagram</span></a></li>
 			<li><a href="mailto:zunaira.nazir30@gamail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 		</ul>
@@ -216,6 +236,19 @@
 			const iframe = document.getElementById("youtubePlayer");
 			iframe.src = ""; // Clear to stop video
 			document.getElementById("videoModal").style.display = "none";
+		}
+	</script>
+	<script>
+		function toggleDescription(button) {
+			const container = button.parentElement;
+			const moreText = container.querySelector('.more-text');
+			const dots = container.querySelector('.dots');
+
+			const isExpanded = moreText.style.display === "inline";
+
+			moreText.style.display = isExpanded ? "none" : "inline";
+			dots.style.display = isExpanded ? "inline" : "none";
+			button.textContent = isExpanded ? "Read more" : "Show less";
 		}
 	</script>
 
