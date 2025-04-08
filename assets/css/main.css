@@ -62,18 +62,27 @@
 .more-text {
 	display: none;
 }
+
 .dots {
 	display: inline;
 }
-.button.learn-more {
+
+.button {
 	display: inline-block;
-	margin-top: 10px;
-	background: none;
-	color: inherit;
-	text-decoration: underline;
-	font-size: 0.9em;
-	cursor: pointer;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	color: #333;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
 }
+
+	.button:hover {
+		background-color: #f0f0f0;
+		color: #007bff;
+	}
+
 /* Containers */
 
 	.container {

@@ -134,23 +134,38 @@
 		</p>
 		<button class="read-more-btn" onclick="toggleDescription(this)">Read more</button>
 	</div>-->
+								 <article>
+									 <header>
+										 <h2>Marcopolo</h2>
+									 </header>
+									 <p>
+										 Contributed as a Unity Developer to a multiverse classroom experience based on the Marco Polo Silk Road.
+										 <span class="dots">...</span>
+										 <span class="more-text">
+											 Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.
+										 </span>
+									 </p>
+									 <ul class="actions">
+										 <li><a href="#" class="button" onclick="toggleDescription(this); return false;">Read more</a></li>
+									 </ul>
+								 </article>
 
-								 <div class="Project1_Marcopolo">
+								 <!--<div class="Project1_Marcopolo">
 									 <header class="align-center">
 										 <p>Lead Unity Developer</p>
 										 <h2>Marcopolo</h2>
 										 <p>
 											 Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road...
 											 <span class="dots">...</span>
-											 <span class="more-text">
+											 <span class="more-text">-->
 
-												 <!--</header><p>--> Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.<!--</p>-->
-											 </span>
+												 <!--</header><p>--> <!--Contributed as a Lead Unity Developer to a  multiverse classroom experience inspired by the Marco Polo Silk Road. Designed and optimized core gameplay systems using Photon Fusion (Shared Mode) for real-time multiplayer. Implemented Addressables with Minio server integration for efficient asset streaming. Ensured seamless React ↔ Unity WebGL communication via JavaScript bridge. Managed CI/CD pipelines with Git, integrated third-party SDKs and plugins, and utilized ScriptableObjects, custom inspectors, and SOLID principles to maintain scalable architecture. Collaborated using Monday.com, Notion, and Hopscotch for agile planning.--><!--</p>-->
+											 <!--</span>
 										 </p>
 										 <ul class="actions">
 											 <li><a href="#" class="button" onclick="toggleDescription(this); return false;">Read more</a></li>
 										 </ul>
-</div>-->
+								 </div>-->-->
 								 <!--<footer class="align-center"><a href="#" class="button alt">Learn More</a>
 	</footer>-->
 							 </div>
@@ -248,13 +263,14 @@
 
 			const isExpanded = moreText.style.display === "inline";
 
+			// Toggle visibility of text
 			moreText.style.display = isExpanded ? "none" : "inline";
 			dots.style.display = isExpanded ? "inline" : "none";
+
+			// Toggle button text
 			button.textContent = isExpanded ? "Read more" : "Show less";
 		}
 	</script>
-
-
 
 </body>
 </html>
