@@ -69,9 +69,9 @@
 .button {
 	display: inline-block;
 	background:#fff; /* White background */
-	border: 1px solid #ccc; /* Light grey outline */
+	border: 1px solid rgba(255, 255, 255, 0.25); /* Light grey outline */
 	padding: 10px 20px;
-	color: #333; /* Black text color */
+	color: #000; /* Black text color */
 	text-decoration: none;
 	border-radius: 5px;
 	font-weight: bold;
