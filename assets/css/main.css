@@ -76,7 +76,9 @@
 	border-radius: 5px;
 	font-weight: bold;
 }
-
+	.button:focus {
+		outline: none; /* Optional: Remove focus outline */
+	}
 	.button:hover {
 		background-color: #f0f0f0; /* Light grey background on hover */
 		color: #007bff; /* Blue text on hover */
