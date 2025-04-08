@@ -59,6 +59,10 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+.box {
+	max-width: 500px;
+	margin: 0 auto;
+}
 .more-text {
 	display: none;
 }
