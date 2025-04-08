@@ -62,7 +62,9 @@
 .more-text {
 	display: none;
 }
-
+.dots {
+	display: inline;
+}
 .button.learn-more {
 	display: inline-block;
 	margin-top: 10px;

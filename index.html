@@ -246,15 +246,11 @@
 			const dots = article.querySelector('.dots');
 			const moreText = article.querySelector('.more-text');
 
-			if (moreText.style.display === "none" || moreText.style.display === "") {
-				moreText.style.display = "inline";
-				dots.style.display = "none";
-				button.textContent = "Show less";
-			} else {
-				moreText.style.display = "none";
-				dots.style.display = "inline";
-				button.textContent = "Read more";
-			}
+			const isExpanded = moreText.style.display === "inline";
+
+			moreText.style.display = isExpanded ? "none" : "inline";
+			dots.style.display = isExpanded ? "inline" : "none";
+			button.textContent = isExpanded ? "Read more" : "Show less";
 		}
 	</script>
 
