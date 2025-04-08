@@ -66,9 +66,9 @@
 .dots {
 	display: inline;
 }
-a.button {
+.button {
 	display: inline-block;
-	background-color:white; /* White background */
+	background:#fff; /* White background */
 	border: 1px solid #ccc; /* Light grey outline */
 	padding: 10px 20px;
 	color: #333; /* Black text color */
@@ -77,7 +77,7 @@ a.button {
 	font-weight: bold;
 }
 
-	a.button:hover {
+	.button:hover {
 		background-color: #f0f0f0; /* Light grey background on hover */
 		color: #007bff; /* Blue text on hover */
 	}
