@@ -68,7 +68,7 @@
 }
 a.button {
 	display: inline-block;
-	background: #fff; /* White background */
+	background-color:white; /* White background */
 	border: 1px solid #ccc; /* Light grey outline */
 	padding: 10px 20px;
 	color: #333; /* Black text color */
