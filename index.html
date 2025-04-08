@@ -240,17 +240,22 @@
 	</script>
 	<script>
 		function toggleDescription(button) {
-			const container = button.parentElement;
-			const moreText = container.querySelector('.more-text');
-			const dots = container.querySelector('.dots');
+			const article = button.closest('article');
+			const dots = article.querySelector('.dots');
+			const moreText = article.querySelector('.more-text');
 
-			const isExpanded = moreText.style.display === "inline";
-
-			moreText.style.display = isExpanded ? "none" : "inline";
-			dots.style.display = isExpanded ? "inline" : "none";
-			button.textContent = isExpanded ? "Read more" : "Show less";
+			if (moreText.style.display === "none" || moreText.style.display === "") {
+				moreText.style.display = "inline";
+				dots.style.display = "none";
+				button.textContent = "Show less";
+			} else {
+				moreText.style.display = "none";
+				dots.style.display = "inline";
+				button.textContent = "Read more";
+			}
 		}
 	</script>
+
 
 
 </body>
