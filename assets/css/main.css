@@ -63,6 +63,13 @@
 	max-width: 500px;
 	margin: 0 auto;
 }
+.grid-style {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+}
+
 .more-text {
 	display: none;
 }
