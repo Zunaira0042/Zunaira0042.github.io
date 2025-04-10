@@ -64,9 +64,9 @@
 .box {
 	max-width: 500px;
 	margin: 0 auto;
-	flex: 1 1 calc(33% - 20px); /* Ensures the width is equal for each box */
-	box-sizing: border-box;
-	margin-bottom: 20px;
+	/*flex: 1 1 calc(33% - 20px);*/ /* Ensures the width is equal for each box */
+	/*box-sizing: border-box;*/
+	/*margin-bottom: 20px;*/
 }
 
 
