@@ -19,7 +19,7 @@
 		vertical-align: baseline;
 	}
 .image.fit img {
-	width: 100%;
+	width: 700px;
 	height: 300px;
 	object-fit: cover; /* Preserve aspect ratio and crop image to fit */
 	display: block;
