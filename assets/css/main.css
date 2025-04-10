@@ -19,7 +19,7 @@
 		vertical-align: baseline;
 	}
 .image.fit img {
-	width: 700px;
+	width: 100%;
 	height: 300px;
 	object-fit: cover; /* Preserve aspect ratio and crop image to fit */
 	display: block;
@@ -2364,6 +2364,8 @@
 	}
 
 		.image img {
+			width: 100%;
+			max-width: 100%;
 			border-radius: 2px;
 			display: block;
 		}
